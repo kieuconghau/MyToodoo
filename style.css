@@ -188,3 +188,29 @@ footer {
         margin: 0 20px;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    #logo {
+        font-size: 25px;
+    }
+
+    #logo:hover {
+        font-size: 26px;
+    }
+
+    #box-add-task {
+        width: 100%;
+    }
+
+    #btn-add-task {
+        padding: 5px;
+    }
+
+    #main, #intro {
+        margin: 0 10px;
+    }
+
+    #task-list {
+        width: 100%;
+    }
+}
