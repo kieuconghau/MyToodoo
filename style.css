@@ -79,6 +79,34 @@ section {
     padding: 25px 0;
 }
 
+#task-list-header {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 50px;
+}
+
+#btn-reset {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+}
+
+#task-list-header > p, #btn-reset {
+    margin: 0;
+    padding: 10px 0;
+    color: #FFF8E8;
+    font-weight: bold;
+    border-bottom: 3px solid #FFF8E8;
+}
+
+#btn-reset:hover {
+    background-color:  #FFBCD9;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
 .task-item {
     position: relative;
     display: grid;

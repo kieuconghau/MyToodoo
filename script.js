@@ -1,14 +1,21 @@
+"use strict";
+
 // Global variables declaration
 var boxAddTask = document.getElementById('box-add-task');
 var btnAddTask = document.getElementById('btn-add-task');
 var taskList = document.getElementById('task-list');
-var mode = "add";   // "add", "edit"
+var btnReset = document.getElementById('btn-reset');
+
+var mode = "add";   // { "add", "edit" }
 var editIDNum;
+var editPreContent;
+
 
 // Invoke functions
 loadTasksFromLocalStorage();
 boxAddTask.focus();
-btnAddTask.setAttribute('onclick', 'addBtnEvent(boxAddTask.value)');
+btnAddTask.setAttribute('onclick', 'addBtnEvent(editPreContent)');
+btnReset.setAttribute('onclick', 'reset()');
 
 
 // Functions
@@ -82,10 +89,13 @@ function editTask(idNum) {
 
     mode = "edit";
     editIDNum = idNum;
+
     var taskContent = document.getElementById(idNum.toString()).firstElementChild;
     boxAddTask.value = taskContent.innerHTML;
     boxAddTask.focus();
+    editPreContent = boxAddTask.value;
     btnAddTask.innerHTML = 'Edit';
+
     btnAddTask.style.backgroundColor = "#FFC75F";
     btnAddTask.onmouseover = () => {
         btnAddTask.style.backgroundColor = "#FF9671";
@@ -94,4 +104,10 @@ function editTask(idNum) {
         btnAddTask.style.backgroundColor = "#FFC75F";
     }
     taskContent.style.backgroundColor = "#FFEECA";
+}
+
+function reset() {
+    taskList.innerHTML = "";
+    window.localStorage.clear();
+    location.reload();
 }

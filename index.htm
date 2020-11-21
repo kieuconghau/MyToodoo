@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List (18127259)</title>
+    <title>My Toodoo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
@@ -17,9 +17,13 @@
         <div id="sec-1">
             <div id="main">
                 <form>
-                    <input id="box-add-task" type="text" placeholder="Type your new task here..." name="a" value="">
+                    <input id="box-add-task" type="text" placeholder="New task...">
                     <button id="btn-add-task">Add</button>
                 </form>
+                <div id="task-list-header">
+                    <p>Task List</p>
+                    <button id="btn-reset">Reset</button>
+                </div>
                 <div id="task-list">
                     <!--
                     <div class="task-item" id="$">
@@ -40,6 +44,7 @@
                     <li>To add a task, type your new task into the above white box.</li>
                     <li>To remove a task, click on the button <span><button class="btn-remove-task-text">X</button></span> which is next to it.</li>
                     <li>To edit a task, click on the content of that task, then edit it on the above white box.</li>
+                    <li>To remove all of the tasks, click on the button Reset right below the white box.</li>
                 </ul>
                 <h3>Features</h3>
                 <ul>
@@ -47,6 +52,7 @@
                     <li>Remove a task.</li>
                     <li>Edit a task.</li>
                     <li>Store the list of tasks into the Local Storage.</li>
+                    <li>Reset the Local Storage (remove the whole tasks list).</li>
                     <li>Responsive design.</li>
                 </ul>
                 <h3>Upcoming features</h3>
