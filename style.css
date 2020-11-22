@@ -6,15 +6,13 @@ body {
 
 header {
     height: 100px;
-    position: relative;
     background-color: #0081CF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: none;
     color: white;
     font-size: 40px;
@@ -119,6 +117,8 @@ section {
     background-color: #FFF8E8;
     margin: 5px 0;
     border-radius: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 .task-content:hover {
@@ -214,6 +214,10 @@ footer {
 
     #main, #intro {
         margin: 0 20px;
+    }
+
+    #btn-add-task {
+        padding: 5px;
     }
 }
 
