@@ -118,7 +118,7 @@ section {
     margin: 5px 0;
     border-radius: 10px;
     overflow: hidden;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .task-content:hover {
