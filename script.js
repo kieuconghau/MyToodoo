@@ -84,13 +84,22 @@ function removeTask(idNum) {
 
 function editTask(idNum) {
     if (editIDNum != null && idNum != editIDNum) {
-        document.getElementById(editIDNum.toString()).firstElementChild.style.backgroundColor = "#FFF8E8";
+        let oldTaskItem = document.getElementById(editIDNum.toString());
+        let oldTaskContent = oldTaskItem.firstElementChild;
+        let oldBtnRemoveTask = oldTaskItem.lastElementChild;
+        
+        oldBtnRemoveTask.style.visibility = "hidden";
+        oldTaskContent.style.backgroundColor = "#FFF8E8";
+        oldTaskItem.style.gridTemplateColumns = "auto";
     }
 
     mode = "edit";
     editIDNum = idNum;
 
-    var taskContent = document.getElementById(idNum.toString()).firstElementChild;
+    var taskItem = document.getElementById(idNum.toString());
+    var taskContent = taskItem.firstElementChild;
+    var btnRemoveTask = taskItem.lastElementChild;
+
     boxAddTask.value = taskContent.innerHTML;
     boxAddTask.focus();
     editPreContent = boxAddTask.value;
@@ -103,7 +112,10 @@ function editTask(idNum) {
     btnAddTask.onmouseout = () => {
         btnAddTask.style.backgroundColor = "#FFC75F";
     }
+
+    taskItem.style.gridTemplateColumns = "auto 35px";
     taskContent.style.backgroundColor = "#FFEECA";
+    btnRemoveTask.style.visibility = "visible";
 }
 
 function reset() {

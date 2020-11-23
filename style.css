@@ -108,7 +108,7 @@ section {
 .task-item {
     position: relative;
     display: grid;
-    grid-template-columns: auto 35px;
+    grid-template-columns: auto;
 }
 
 .task-content {
@@ -138,6 +138,7 @@ section {
     color: white;
     font-weight: bold;
     border-radius: 20px;
+    visibility: hidden;
 }
 
 .btn-remove-task-text {
